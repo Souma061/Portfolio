@@ -26,6 +26,15 @@ header {
   text-align: center;
 }
 
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #fdf0d5;
+}
+
 nav ul {
   display: flex;
   justify-content: center;
@@ -54,19 +63,23 @@ nav ul li a:hover {
 }
 
 section {
-  margin: 15px;
+  margin: 15px auto;
   padding: 15px;
   background-color: thistle;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 800px;
 }
 
 .project {
-  margin: 10px 0;
+  max-width: 100%;
+  margin: 15px auto;
   padding: 10px;
   border: 2px solid black;
   border-radius: 10px;
   transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #fff;
 }
 
 .project:hover {
@@ -90,10 +103,11 @@ footer {
   color: white;
   text-align: center;
   padding: 15px;
+  margin-top: auto;
 }
 
 /* Responsive tweaks */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   body {
     font-size: 15px;
   }
@@ -102,7 +116,8 @@ footer {
     font-size: 1.5em;
   }
 
-  header h2, header h3 {
+  header h2,
+  header h3 {
     font-size: 1.1em;
   }
 
@@ -118,9 +133,14 @@ footer {
   section {
     margin: 10px;
     padding: 10px;
+    width: 95%;
   }
 
   .project h3 {
     font-size: 1em;
+  }
+
+  .project {
+    padding: 8px;
   }
 }
